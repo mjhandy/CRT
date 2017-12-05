@@ -1,0 +1,30 @@
+{
+  "name": "crt-dev-site",
+  "version": "0.0.1",
+  "description": "CRT colour based site",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjhandy/CRT.git"
+  },
+  "keywords": [
+    "CRT",
+    "colours",
+    "ASCII"
+  ],
+  "author": "Mark J. Handy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mjhandy/CRT/issues"
+  },
+  "homepage": "https://github.com/mjhandy/CRT#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^2.0.0",
+    "load-grunt-tasks": "^3.5.2"
+  }
+}

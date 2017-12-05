@@ -1,0 +1,27 @@
+{
+  "name": "crt-dev-site",
+  "description": "CRT colour based site",
+  "main": "index.php",
+  "authors": [
+    "Mark J. Handy"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "CRT",
+    "colours",
+    "ASCII"
+  ],
+  "homepage": "https://github.com/mjhandy/CRT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "bootstrap": "v4.0.0-alpha.6"
+  }
+}
