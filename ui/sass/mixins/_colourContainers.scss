@@ -1,0 +1,61 @@
+
+/*
+  Progressivle change the background colour of a row of divs.
+  Based on this: https://stackoverflow.com/questions/16582085/sass-change-color-with-for-loop
+
+  usage: @include color-columns(5,'col',#faa, 'lighten')
+
+  example html
+
+  <div class="col-1"></div>
+  <div class="col-2"></div>
+  <div class="col-3"></div>
+  <div class="col-4"></div>
+  <div class="col-5"></div>
+
+
+*/
+
+
+@mixin colorContainers-columns ($count, $startcolor, $start : darken) {
+  $loop_color : $startcolor;
+
+  @if $start == 'lighten' {
+    @for $i from 0 through $count {
+      // start colour at base
+      @if $i > 1 {
+        $loop_color : lighten($loop_color, 2.5%);
+      }
+      .conBG-#{$i} {
+        background-color : $loop_color;
+      }
+    }
+  }
+  @else {
+    @for $i from 0 through $count {
+      @if $i > 1 {
+        $loop_color : darken($loop_color, 2.5%);
+      }
+      .conBG-#{$i} {
+        background-color : $loop_color;
+      }
+    }
+  }
+}
+
+@mixin colorContainers-sections($startcolor) {
+  $loop_color : $startcolor;
+
+  @for $i from 0 through 10 {
+    // start colour at base
+    @if $i > 0 {
+      $loop_color : lighten($loop_color, 5%);
+    }
+    .bg-#{$i} {
+      background-color : $loop_color;
+      @if (lightness($loop_color) < 40) {
+        // color : $white;
+      }
+    }
+  }
+}

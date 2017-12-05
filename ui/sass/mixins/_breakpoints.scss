@@ -1,0 +1,12 @@
+// see https://jdsteinbach.com/css//sass-maps-breakpoint-mixin/
+$breakpoints : ( cell: 320px, sm: 480px, md: 720px, lg: 992px, wd: 1200px, xl: 1400px);
+@mixin bp($name) {
+  @if not map-has-key($breakpoints, $name) {
+    @warn 'Warning: `#{$name}` is not a valid breakpoint name.';
+  }
+  @else {
+    @media (min-width: map-get($breakpoints, $name)) {
+      @content;
+    }
+  }
+}

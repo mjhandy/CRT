@@ -1,0 +1,54 @@
+$base-font-size : 10px;
+body {
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+  color : $copy;
+
+  @include font-size(1.4, 120%, 400);
+
+}
+
+
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+a {
+  
+  color: inherit;
+}
+h1 {
+  margin : 0 0 10px 0;
+
+  @include font-size(4, 120%, 400);
+
+}
+h2 {
+  margin : 0 0 20px;
+
+  @include font-size(3, 120%, 400);
+
+}
+h3 {
+  margin : 0 0 10px 0;
+
+  @include font-size(2.0, 120%, 400);
+
+}
+h4 {
+  margin : 0;
+
+  @include font-size(1.4, 100%, 700);
+}
+p,
+li {
+  @include font-size(1.4, 120%, 400);
+  footer & {
+    @include font-size(1.2, 120%, 400);
+  }
+}
+a {
+  text-decoration : underline;
+  color : inherit;
+}

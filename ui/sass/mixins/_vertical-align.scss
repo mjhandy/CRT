@@ -1,0 +1,16 @@
+// use to vertical center a block element
+
+
+@mixin vertical-align() {
+  position : absolute;
+  top : 50%;
+
+  -webkit-transform : translateY(-50%);
+      -ms-transform : translateY(-50%);
+          transform : translateY(-50%);
+  // we use the parent parent mixin to ensure the parent element has position: relative
+
+  @include parent() {
+    position : relative;
+  }
+}
