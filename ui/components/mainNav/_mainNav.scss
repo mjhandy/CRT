@@ -10,18 +10,37 @@
     }
     // global li:END
 
-    // main level li:START
-    > li{
-      border-bottom: 2px solid $green;
-    }
-    // main level li:END
-
   }
+  
+  // Primary Nav:START
+  .primaryNav{
+    &--li{
+      border-bottom: 2px solid $borderColour;
+    }
+    &--link{
+
+    }
+  }
+  // Primary Nav:END
+
+  // Secondary Nav:START
+  .secondaryNav{
+    &--li{
+
+    }
+    &--link{
+
+    }
+  }
+  // Secondary Nav:END
+
 
   // global a:START
   a{
     text-decoration: none;
     @include font-size(1.6, 120%, 500);
+    display: block;
+    padding: 5px;
   }
   // global a:END  
 }
