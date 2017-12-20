@@ -27,8 +27,45 @@ module.exports = function(grunt) {
         js:[
           '<%= info.sourceDir %>*.js'
         ]
-      }
+      },
       //sass compile
+      sass:{
+        dev:{
+          files: {
+            '<%= info.sourceDir %>main.css' : '<%= info.sassDir %>main.scss'
+          }
+        },
+        options:{
+          includePaths: [
+            'bower_components/bootstrap-sass/assets/stylesheets',
+            'bower_components/bourbon/app/assets/stylesheets',
+            'bower_components/slick-carousel/slick',
+          ]        
+        }        
+      }
     });
 
+
+    //Grunt tasts
+    grunt.registerTask('sass',[
+      'newer:csscomb',
+      'sass:dev'
+    ]);
+    
+    grunt.registerTask('js',[
+      'jsbeautifier:all',
+      'jshint:all',
+      'uglify:dev'
+    ]);    
+
+    grunt.registerTask('src',[
+      'sass',
+      'js'
+    ]);
+
+    grunt.registerTask('dev',[
+      'clean',
+      'src',
+      'watch'
+    ]);
 };
