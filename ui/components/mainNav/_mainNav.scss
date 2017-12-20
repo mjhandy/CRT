@@ -1,0 +1,26 @@
+#mainMenu{
+  ul{
+    margin: 0;
+    padding: 0;
+
+    // global li:START
+    li{
+      margin: 0;
+      padding: 0;
+    }
+    // global li:END
+
+    // main level li:START
+    > li{
+
+    }
+    // main level li:END
+
+  }
+
+  // global a:START
+  a{
+    font-size: 16px;
+  }
+  // global a:END  
+}
