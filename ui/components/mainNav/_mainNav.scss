@@ -12,7 +12,7 @@
 
     // main level li:START
     > li{
-
+      border-bottom: 2px solid $green;
     }
     // main level li:END
 
@@ -20,7 +20,8 @@
 
   // global a:START
   a{
-    font-size: 16px;
+    text-decoration: none;
+    @include font-size(1.6, 120%, 500);
   }
   // global a:END  
 }

@@ -51,5 +51,8 @@ li {
 }
 a {
   text-decoration : underline;
-  color : inherit;
+  color : $green;
+  &:hover{
+    text-decoration: none;
+  }
 }
